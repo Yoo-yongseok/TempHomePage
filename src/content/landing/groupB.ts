@@ -195,7 +195,7 @@ export const DEMO_REPORT = {
 }
 
 export const DEMO_RESUME = {
-  name: '김○환',
+  name: '김○우',
   role: '데이터 분석 직무 지원',
   sections: [
     { head: '핵심 역량', body: '엑셀·SQL을 활용한 매출 데이터 정리 및 주간 리포트 자동화' },

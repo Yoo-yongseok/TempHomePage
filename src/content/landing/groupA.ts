@@ -54,7 +54,7 @@ export const WHO = {
 
 export const INTRO = {
   quote: '혼자 1년 동안 못 넘던 서류 전형을\n코칭 3주 만에 통과했습니다.',
-  author: { name: '김○환 님', role: '직무 코칭 수료 · IT 기업 입사', initial: '김' },
+  author: { name: '김○우 님', role: '직무 코칭 수료 · IT 기업 입사', initial: '김' },
   photoLabel: '교육 현장 사진',
 }
 
