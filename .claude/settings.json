@@ -1,0 +1,6 @@
+{
+  "enabledPlugins": {
+    "impeccable@impeccable": true,
+    "frontend-design@anthropic-plugin-directory": true
+  }
+}
