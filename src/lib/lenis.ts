@@ -19,8 +19,11 @@ export function destroyLenis() {
 }
 
 export function scrollToY(top: number, immediate = false) {
-  if (instance) instance.scrollTo(top, { immediate })
-  else window.scrollTo({ top, behavior: immediate ? 'instant' : 'smooth' })
+  if (instance) instance.scrollTo(top, { immediate, force: true })
+  else {
+    const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    window.scrollTo({ top, behavior: immediate || reduced ? 'instant' : 'smooth' })
+  }
 }
 
 /** 메뉴·모달이 열려 있는 동안 페이지 스크롤을 막는다. */

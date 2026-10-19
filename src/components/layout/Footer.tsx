@@ -3,6 +3,7 @@ import { Link } from 'react-router'
 import { MENUS } from '../../content/menu'
 import { COMPANY } from '../../content/site'
 import { InstagramIcon, LinkedinIcon, MailIcon, PinIcon, YoutubeIcon } from '../ui/icons'
+import { HomeLink } from './HomeLink'
 import { Logo } from './Logo'
 
 // 메뉴 구조 그대로 푸터 컬럼 생성 (하위 메뉴가 없는 카테고리는 자기 자신을 링크로)
@@ -39,9 +40,9 @@ export function Footer() {
     <footer className="w-full bg-gray-50 px-6 py-[60px] md:px-10 xl:px-0">
       <div className="mx-auto flex w-full max-w-[1200px] flex-col gap-[60px] md:gap-[100px]">
         <div className="flex flex-col gap-10 md:flex-row md:items-start md:justify-between">
-          <Link to="/" aria-label="한국AX협회 홈" className="w-fit">
+          <HomeLink className="w-fit">
             <Logo size="lg" />
-          </Link>
+          </HomeLink>
           <nav className="grid grid-cols-2 gap-x-8 gap-y-10 sm:grid-cols-4 lg:flex lg:gap-3">
             {COLUMNS.map((col) => (
               <div key={col.title} className="flex flex-col gap-4 md:w-[100px]">

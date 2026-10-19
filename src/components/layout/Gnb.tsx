@@ -2,8 +2,9 @@ import { useEffect, useLayoutEffect, useRef, useState } from 'react'
 import { Link, useLocation } from 'react-router'
 import { MENUS } from '../../content/menu'
 import { useMediaQuery, useScrolledPast } from '../../lib/hooks'
-import { lockScroll } from '../../lib/lenis'
+import { lockScroll, scrollToY } from '../../lib/lenis'
 import { ArrowUpRight, ChevronDown } from '../ui/icons'
+import { HomeLink } from './HomeLink'
 import { Logo } from './Logo'
 
 const ExternalIcon = () => <ArrowUpRight className="ml-1 size-3.5" />
@@ -30,6 +31,8 @@ export function Gnb() {
   const [mobileExpanded, setMobileExpanded] = useState<number | null>(null)
 
   const buttonRefs = useRef<(HTMLElement | null)[]>([])
+  // 모바일 메뉴가 열린 채 로고를 누르면, 메뉴가 닫혀 스크롤 잠금이 풀린 뒤 맨 위로
+  const scrollTopAfterClose = useRef(false)
   const panelInnerRef = useRef<HTMLDivElement>(null)
 
   const transparent = pathname === '/' && !scrolled && open === null && !mobileOpen
@@ -62,6 +65,10 @@ export function Gnb() {
 
   useEffect(() => {
     lockScroll(mobileOpen)
+    if (!mobileOpen && scrollTopAfterClose.current) {
+      scrollTopAfterClose.current = false
+      scrollToY(0)
+    }
     return () => lockScroll(false)
   }, [mobileOpen])
 
@@ -88,9 +95,17 @@ export function Gnb() {
         onMouseLeave={() => canHover && setOpen(null)}
       >
         <div className="relative mx-auto flex h-[60px] w-full max-w-[1200px] items-center justify-between px-5 md:px-4 lg:px-10 xl:px-0">
-          <Link to="/" aria-label="한국AX협회 홈" onMouseEnter={() => canHover && setOpen(null)}>
+          <HomeLink
+            scrollOnHome={!mobileOpen}
+            onMouseEnter={() => canHover && setOpen(null)}
+            onClick={() => {
+              setOpen(null)
+              if (mobileOpen && pathname === '/') scrollTopAfterClose.current = true
+              setMobileOpen(false)
+            }}
+          >
             <Logo light={transparent} />
-          </Link>
+          </HomeLink>
 
           {/* 카테고리 — 헤더 정중앙 */}
           <div className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-1 md:flex lg:gap-3 xl:gap-5">
