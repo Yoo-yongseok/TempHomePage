@@ -1,0 +1,90 @@
+/* 랜딩 B그룹 — 커리큘럼 카드 등장·패널 전환·데모 캔버스 */
+
+/* 주차 카드 순차 등장 */
+.curriculum-grid .curriculum-card {
+  opacity: 0;
+}
+.curriculum-grid.in .curriculum-card {
+  opacity: 1;
+  animation: curriCardIn 0.6s var(--ease-brand) backwards;
+}
+.curriculum-grid.in .curriculum-card:nth-child(2) {
+  animation-delay: 0.1s;
+}
+.curriculum-grid.in .curriculum-card:nth-child(3) {
+  animation-delay: 0.2s;
+}
+.curriculum-grid.in .curriculum-card:nth-child(4) {
+  animation-delay: 0.3s;
+}
+
+@keyframes curriCardIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* 진행 트랙 세그먼트 — 진입 시 왼쪽부터 차오름 */
+.curriculum-track > * {
+  transform-origin: left center;
+  transform: scaleX(0);
+}
+.curriculum-track.in > * {
+  transform: none;
+  transition:
+    transform 0.7s var(--ease-brand),
+    background-color 0.3s var(--ease-brand);
+}
+.curriculum-track.in > :nth-child(2) {
+  transition-delay: 0.1s, 0s;
+}
+.curriculum-track.in > :nth-child(3) {
+  transition-delay: 0.2s, 0s;
+}
+.curriculum-track.in > :nth-child(4) {
+  transition-delay: 0.3s, 0s;
+}
+
+/* 탭 전환 시 패널·화면 재등장 */
+@keyframes cdsPanelIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.curriculum-panel-in {
+  animation: cdsPanelIn 0.28s var(--ease-brand);
+}
+
+/* 730×456.25 고정 캔버스를 화면 폭에 맞춰 축소 */
+.curriculum-viewport > * {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 730px;
+  height: 456.25px;
+  transform-origin: 0 0;
+  transform: scale(var(--demo-scale, 1)) !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .curriculum-grid .curriculum-card,
+  .curriculum-track > * {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+    animation: none !important;
+  }
+  .curriculum-panel-in {
+    animation: none !important;
+  }
+}

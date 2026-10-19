@@ -1,0 +1,31 @@
+/* 홈 섹션 전용 모션 */
+
+/* 히어로 스크롤 안내: 마우스 휠 점이 아래로 흘러내림 */
+.scroll-cue-dot {
+  animation: scrollCueDot 1.8s cubic-bezier(0.65, 0, 0.35, 1) infinite;
+}
+
+@keyframes scrollCueDot {
+  0% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+  20% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scroll-cue-dot {
+    animation: none;
+    opacity: 1;
+  }
+}

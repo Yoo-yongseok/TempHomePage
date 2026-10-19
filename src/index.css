@@ -1,1 +1,186 @@
 @import 'tailwindcss';
+
+@theme {
+  --font-sans: 'Pretendard Variable', 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+
+  --breakpoint-3xl: 1920px;
+
+  --color-primary: #2d64fa;
+  --color-primary-hover: #1f54d6;
+  --color-primary-soft: #eaf0fe;
+
+  /* 2번 사이트(랜딩 하단 섹션) 토큰 */
+  --color-ink: #1a1d24;
+  --color-signal: #2563eb;
+  --color-signal-text: #1d4ed8;
+  --color-signal-light: #5b9bff;
+  --color-rule: #e5e7eb;
+  --color-mute: #6b7280;
+  /* 영문·숫자는 Plex Mono, 한글은 Pretendard로 (Plex Mono에 한글 글리프 없음) */
+  --font-mono: 'IBM Plex Mono', 'Pretendard Variable', 'Pretendard', ui-monospace, monospace;
+  --ease-brand: cubic-bezier(0.16, 1, 0.3, 1);
+
+  --color-gray-50: #f6f7f9;
+  --color-gray-100: #eff1f4;
+  --color-gray-200: #e4e5e8;
+  --color-gray-300: #d1d3d8;
+  --color-gray-400: #9ca0ab;
+  --color-gray-500: #6d717e;
+  --color-gray-600: #4f535d;
+  --color-gray-700: #3c3f47;
+  --color-gray-800: #25272d;
+  --color-gray-900: #16171b;
+
+  --animate-s4fade: s4fade 400ms ease-out;
+  --animate-fade-in: fadeIn 300ms ease-out;
+  --animate-marquee: marquee 36s linear infinite;
+  --animate-rise-in: riseIn 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+
+  @keyframes s4fade {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+  @keyframes riseIn {
+    from {
+      opacity: 0;
+      transform: translateY(0.5em);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}
+
+@layer base {
+  /* 브라우저 기본 요소도 사이트 색으로 */
+  ::selection {
+    background: rgb(37 99 235 / 0.18);
+    color: inherit;
+  }
+  html {
+    accent-color: var(--color-signal);
+    caret-color: var(--color-signal);
+    scrollbar-color: #c4c8d0 transparent;
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-signal);
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+  html,
+  body {
+    overflow-x: clip;
+  }
+  body {
+    color: #16171b;
+    background-color: #fff;
+    word-break: keep-all;
+    overflow-wrap: break-word;
+    letter-spacing: -0.01em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+/* 스크롤 등장 (2번 사이트 .reveal / .reveal-stagger) — useReveal 훅이 .in 클래스를 붙인다 */
+@layer components {
+  .reveal {
+    opacity: 0;
+    transform: translateY(12px);
+    transition:
+      opacity 0.6s var(--ease-brand),
+      transform 0.6s var(--ease-brand);
+  }
+  .reveal.in {
+    opacity: 1;
+    transform: none;
+  }
+  .reveal-stagger > * {
+    opacity: 0;
+  }
+  .reveal-stagger.in > * {
+    opacity: 1;
+    animation: staggerIn 0.5s var(--ease-brand) backwards;
+  }
+  .reveal-stagger.in > :nth-child(2) {
+    animation-delay: 80ms;
+  }
+  .reveal-stagger.in > :nth-child(3) {
+    animation-delay: 160ms;
+  }
+  .reveal-stagger.in > :nth-child(4) {
+    animation-delay: 240ms;
+  }
+  .reveal-stagger.in > :nth-child(5) {
+    animation-delay: 320ms;
+  }
+  .reveal-stagger.in > :nth-child(n + 6) {
+    animation-delay: 400ms;
+  }
+}
+
+@keyframes staggerIn {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .reveal-stagger > * {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+    animation: none !important;
+  }
+  .animate-rise-in,
+  .animate-s4fade {
+    animation: none !important;
+  }
+}
+
+/* Lenis */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
