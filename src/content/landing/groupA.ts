@@ -20,7 +20,7 @@ export const SOLUTION = {
   titleBefore: '단순 정보가 아니라',
   titleSig: "'합격하는 법'",
   titleAfter: '을 익혀야 합니다',
-  sub: '진단 → 맞춤 학습 → 취업 연결까지, 바로잡이 단계별로 함께합니다.',
+  sub: '진단 → 맞춤 학습 → 취업 연결까지, 한국AX협회가 단계별로 함께합니다.',
   steps: [
     { no: '01', title: '역량 진단', desc: '희망 직무와 현재 이력을 분석해 부족한 역량을 짚어드립니다.' },
     { no: '02', title: '맞춤 학습', desc: '자격증 교육과 1:1 직무 코칭으로 필요한 부분만 채웁니다.' },
@@ -62,7 +62,7 @@ export type MethodIcon = 'shield' | 'pen' | 'cycle' | 'target'
 export type MethodCard = { icon: MethodIcon; title: string; desc: string }
 
 export const METHOD = {
-  title: '검증된 바로잡 커리어\n프로그램을 제공해드립니다',
+  title: '검증된 한국AX협회 커리어\n프로그램을 제공해드립니다',
   metrics: [
     { value: '5만+', label: '누적 수강생' },
     { value: '4.8 / 5', label: '수강생 만족도' },

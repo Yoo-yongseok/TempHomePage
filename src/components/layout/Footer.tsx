@@ -39,7 +39,7 @@ export function Footer() {
     <footer className="w-full bg-gray-50 px-6 py-[60px] md:px-10 xl:px-0">
       <div className="mx-auto flex w-full max-w-[1200px] flex-col gap-[60px] md:gap-[100px]">
         <div className="flex flex-col gap-10 md:flex-row md:items-start md:justify-between">
-          <Link to="/" aria-label="바로잡 홈" className="w-fit">
+          <Link to="/" aria-label="한국AX협회 홈" className="w-fit">
             <Logo size="lg" />
           </Link>
           <nav className="grid grid-cols-2 gap-x-8 gap-y-10 sm:grid-cols-4 lg:flex lg:gap-3">

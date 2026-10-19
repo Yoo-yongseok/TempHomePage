@@ -14,7 +14,7 @@ export function InterviewScreen() {
           <span className="flex size-4 items-center justify-center rounded-[4px] bg-[#2563EB] text-[6px] font-extrabold text-white">
             바로
           </span>
-          바로잡 모의 면접
+          한국AX협회 모의 면접
           <span className="ml-3 text-[#8b909b]">×</span>
         </div>
       </div>

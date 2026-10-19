@@ -23,7 +23,7 @@ export function Logo({ light = false, size = 'md' }: { light?: boolean; size?: k
         className={`${s.text} leading-none font-extrabold tracking-[-0.04em] transition-colors duration-200`}
         style={{ color: light ? '#ffffff' : '#16171b' }}
       >
-        바로잡
+        한국AX협회
       </span>
     </span>
   )

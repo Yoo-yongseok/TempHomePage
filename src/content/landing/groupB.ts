@@ -10,7 +10,7 @@ export type BenefitRow = {
 }
 
 export const BENEFITS = {
-  title: '바로잡 수강 혜택',
+  title: '한국AX협회 수강 혜택',
   rows: [
     {
       label: '강의 다시보기 제공',
@@ -19,9 +19,9 @@ export const BENEFITS = {
       mock: 'chat',
     },
     {
-      label: '바로잡 학습 앱',
+      label: '한국AX협회 학습 앱',
       title: '진도·과제·지원 현황을\n학습 앱 하나로',
-      desc: '강의 진도와 과제, 모의고사 점수, 기업 지원 현황을\n바로잡 학습 앱에서 한눈에 확인합니다.',
+      desc: '강의 진도와 과제, 모의고사 점수, 기업 지원 현황을\n한국AX협회 학습 앱에서 한눈에 확인합니다.',
       mock: 'app',
     },
     {
@@ -42,7 +42,7 @@ export const BENEFIT_CHAT = {
   date: '6월 14일 토요일',
   manager: {
     avatar: '매',
-    name: '바로잡 학습매니저',
+    name: '한국AX협회 학습매니저',
     time: '오후 7:12',
     text: '오늘 3주차 강의 녹화본 올려드려요. 헷갈리는 부분은 언제든 질문 남겨주세요!',
   },
@@ -68,7 +68,7 @@ export const BENEFIT_STEPS = {
 }
 
 export const PLATFORM = {
-  title: '바로잡 앱 하나로 학습부터 지원, 합격 결과까지 한곳에서 관리합니다',
+  title: '한국AX협회 앱 하나로 학습부터 지원, 합격 결과까지 한곳에서 관리합니다',
   steps: [
     {
       title: '학습 관리',
@@ -83,8 +83,8 @@ export const PLATFORM = {
       desc: '합격·불합격 결과와 면접 피드백을 쌓아 다음 지원 전략으로 이어갑니다.',
     },
   ],
-  image: '바로잡 앱 대시보드 화면',
-  chipName: '바로잡 앱',
+  image: '한국AX협회 앱 대시보드 화면',
+  chipName: '한국AX협회 앱',
   chipText: '학습·지원·결과를 한곳에서 관리하는 커리어 플랫폼',
 }
 
@@ -112,7 +112,7 @@ export type CurriWeek = {
 export const CURRICULUM = {
   title: '3주 만에 취업 준비 끝내기(1:1 커리어 컨설팅 포함)',
   /** 브라우저 프레임 주소창 — 뒤에 /{demo} */
-  host: 'barojob.app',
+  host: 'koreaax.app',
   tabsLabel: '주차별 커리큘럼',
   weeks: [
     {
@@ -130,7 +130,7 @@ export const CURRICULUM = {
         ],
         demo: 'report',
         caption: '진단 결과로 만든 첫 실력 리포트 — 앱에서 매주 업데이트',
-        banner: '진단 결과는 바로잡 앱에 그대로 저장됩니다. 과정이 끝난 뒤에도 내 성장 기록으로 남습니다.',
+        banner: '진단 결과는 한국AX협회 앱에 그대로 저장됩니다. 과정이 끝난 뒤에도 내 성장 기록으로 남습니다.',
       },
     },
     {
@@ -163,7 +163,7 @@ export const CURRICULUM = {
         bullets: [
           { title: '직무별 모의 면접', desc: '기업·직무별 예상 질문으로 실전처럼 답변을 연습' },
           { title: '답변 피드백 리포트', desc: '논리·전달력·직무 적합도를 항목별 점수와 코멘트로 확인' },
-          { title: '채용관 실전 지원', desc: '바로잡 기업 채용관 공고에 지원하고 진행 상태를 앱에서 관리' },
+          { title: '채용관 실전 지원', desc: '한국AX협회 기업 채용관 공고에 지원하고 진행 상태를 앱에서 관리' },
         ],
         demo: 'interview',
         caption: '모의 면접 답변을 분석한 피드백 리포트',
@@ -191,7 +191,7 @@ export const DEMO_REPORT = {
     { name: '커뮤니케이션', value: 58 },
   ],
   actions: ['컴퓨터활용능력 1급 준비', 'SQL 기초 보강', '발표 연습 2회'],
-  chips: ['매주 자동 업데이트', '바로잡 학습 앱'],
+  chips: ['매주 자동 업데이트', '한국AX협회 학습 앱'],
 }
 
 export const DEMO_RESUME = {
@@ -240,7 +240,7 @@ export const VALUE = {
       { title: '스스로 준비하는 힘', desc: '다음 지원도 혼자 설계하는 방법' },
     ],
     [
-      { title: '바로잡 학습 앱 이용권', desc: '학습·지원·결과를 한곳에서 관리' },
+      { title: '한국AX협회 학습 앱 이용권', desc: '학습·지원·결과를 한곳에서 관리' },
       { title: '1:1 커리어 컨설팅', desc: '수료 후 맞춤 상담으로 합격까지' },
       { title: '강의 다시보기 영상', desc: '시험 직전까지 반복 복습' },
       { title: '스터디 단톡방 Q&A', desc: '매니저·동기와 실시간 질문' },

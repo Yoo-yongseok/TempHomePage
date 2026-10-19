@@ -45,7 +45,7 @@ export function Hero() {
           <h1 className="text-[32px] leading-[1.2] font-bold tracking-[-0.5px] text-white 3xl:text-[67px]! md:text-[56px] md:tracking-normal">
             커리어 고민의 끝,
             <br />
-            바로잡
+            한국AX협회
           </h1>
           <p className="text-[16px] leading-[1.5] font-normal tracking-[-0.16px] text-white/90 md:text-[18px] md:leading-[1.4] md:tracking-[-0.18px]">
             자격증부터 취업까지 한 번에 연결하는 <br className="md:hidden" />

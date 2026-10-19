@@ -10,7 +10,7 @@ const svg = {
   'aria-hidden': true,
 }
 
-/** 좌 혼자 준비(뮤트) / 우 바로잡(블루 그라디언트) 비교 — 이음매 위 VS 배지 */
+/** 좌 혼자 준비(뮤트) / 우 한국AX협회(블루 그라디언트) 비교 — 이음매 위 VS 배지 */
 export function CompareSection() {
   const { title, sub, solo, baro } = COMPARE
   return (

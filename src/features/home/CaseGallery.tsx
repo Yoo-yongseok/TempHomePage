@@ -142,7 +142,7 @@ export function CaseGallery() {
   return (
     <section className="w-full overflow-hidden bg-white py-[80px] md:py-[100px]">
       <h2 className="px-6 text-center text-[28px] leading-[1.2] font-bold text-gray-900 md:text-[40px]">
-        바로잡이 함께한 <br className="md:hidden" />
+        한국AX협회가 함께한 <br className="md:hidden" />
         커리어 성장 현장
       </h2>
       <p className="mt-3 px-6 text-center text-[16px] leading-[1.4] font-normal tracking-[-0.18px] text-gray-500 md:text-[18px]">

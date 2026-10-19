@@ -1,7 +1,7 @@
 import { LogoMark } from '../../../components/layout/Logo'
 import { BENEFIT_CHAT as C } from '../../../content/landing/groupB'
 
-/** 혜택 1 — 바로잡 앱 스터디 라운지 채팅 카드 */
+/** 혜택 1 — 한국AX협회 앱 스터디 라운지 채팅 카드 */
 export function StudyChatMock() {
   return (
     <div className="w-full max-w-[440px] overflow-hidden rounded-[20px] border border-[#e6e8ee] bg-white text-left shadow-[0_1px_2px_#1018280a,0_28px_60px_-30px_#10182847]">

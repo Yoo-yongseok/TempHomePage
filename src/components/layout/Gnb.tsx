@@ -88,7 +88,7 @@ export function Gnb() {
         onMouseLeave={() => canHover && setOpen(null)}
       >
         <div className="relative mx-auto flex h-[60px] w-full max-w-[1200px] items-center justify-between px-5 md:px-4 lg:px-10 xl:px-0">
-          <Link to="/" aria-label="바로잡 홈" onMouseEnter={() => canHover && setOpen(null)}>
+          <Link to="/" aria-label="한국AX협회 홈" onMouseEnter={() => canHover && setOpen(null)}>
             <Logo light={transparent} />
           </Link>
 

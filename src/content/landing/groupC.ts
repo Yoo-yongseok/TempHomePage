@@ -14,14 +14,14 @@ export const COACH = {
     { text: '대기업·공공기관 채용 실무 12년' },
     { text: '서류·면접 평가위원 300회 이상 참여' },
     { text: '직무 전환 코칭 누적 ', strong: '1,200명' },
-    { text: '바로잡 코칭 수강생 만족도 ', strong: '4.8 / 5' },
+    { text: '한국AX협회 코칭 수강생 만족도 ', strong: '4.8 / 5' },
     { text: '1:1 밀착 피드백 — 막히는 지점을 그 자리에서 해결' },
   ],
 }
 
 export const COMPARE = {
   title: '혼자 하는 취업 준비는 이제 그만',
-  sub: '혼자서는 막히는 지점이, 바로잡에서는 코치와 함께 바로 풀립니다.',
+  sub: '혼자서는 막히는 지점이, 한국AX협회에서는 코치와 함께 바로 풀립니다.',
   solo: {
     label: '혼자 하는 취업 준비',
     tag: 'ALONE',
@@ -33,7 +33,7 @@ export const COMPARE = {
     ],
   },
   baro: {
-    label: '바로잡',
+    label: '한국AX협회',
     tag: 'WITH COACH',
     rows: [
       { small: '막히면 바로', bold: '코치에게 질문·해결' },
@@ -53,7 +53,7 @@ export type Review = {
 }
 
 export const REVIEWS_HEAD = {
-  title: '바로잡과 함께 한\n수강생분들의 이야기',
+  title: '한국AX협회와 함께 한\n수강생분들의 이야기',
   metric: { prefix: '누적 수강생 5만 명 · 만족도 ', score: '4.8', suffix: ' / 5' },
   nav: { prev: '이전 후기', next: '다음 후기' },
 }
@@ -118,8 +118,8 @@ export const REVIEWS: Review[] = [
 ]
 
 export const NEWS_SECTION = {
-  title: '바로잡 소식',
-  sub: '공지부터 합격 후기, 이벤트까지 바로잡의 새로운 이야기를 전해드려요.',
+  title: '한국AX협회 소식',
+  sub: '공지부터 합격 후기, 이벤트까지 한국AX협회의 새로운 이야기를 전해드려요.',
   count: 6,
   more: { label: '소식 전체보기', to: '/news/newsroom' },
 }
