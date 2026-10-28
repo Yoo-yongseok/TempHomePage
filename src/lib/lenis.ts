@@ -19,8 +19,11 @@ export function destroyLenis() {
 }
 
 export function scrollToY(top: number, immediate = false) {
-  if (instance) instance.scrollTo(top, { immediate, force: true })
-  else {
+  if (instance) {
+    // 페이지가 막 바뀐 직후엔 Lenis가 이전 페이지 높이를 기억하고 있어 아래쪽 위치가 잘린다 → 먼저 다시 잰다
+    if (immediate) instance.resize()
+    instance.scrollTo(top, { immediate, force: true })
+  } else {
     const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches
     window.scrollTo({ top, behavior: immediate || reduced ? 'instant' : 'smooth' })
   }

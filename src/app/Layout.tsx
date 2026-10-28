@@ -2,7 +2,8 @@ import { useEffect } from 'react'
 import { Outlet, useLocation } from 'react-router'
 import { Footer } from '../components/layout/Footer'
 import { Gnb } from '../components/layout/Gnb'
-import { destroyLenis, initLenis, scrollToY } from '../lib/lenis'
+import { destroyLenis, initLenis } from '../lib/lenis'
+import { useScrollRestoration } from '../lib/useScrollRestoration'
 
 export function Layout() {
   const { pathname } = useLocation()
@@ -14,9 +15,8 @@ export function Layout() {
     return destroyLenis
   }, [])
 
-  useEffect(() => {
-    scrollToY(0, true)
-  }, [pathname])
+  // 새 페이지는 맨 위에서, 뒤로가기로 돌아오면 보던 위치에서 시작
+  useScrollRestoration()
 
   return (
     <>
