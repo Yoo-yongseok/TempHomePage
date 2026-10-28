@@ -21,10 +21,13 @@ export function Layout() {
   return (
     <>
       <Gnb />
-      <main className={isHome ? '' : 'pt-[60px]'}>
-        <Outlet />
-      </main>
-      <Footer />
+      {/* key: 경로가 바뀔 때마다 본문+푸터를 다시 마운트해 부드럽게 떠오르며 전환 (헤더는 고정) */}
+      <div key={pathname} className="animate-page-in motion-reduce:animate-none">
+        <main className={isHome ? '' : 'pt-[60px]'}>
+          <Outlet />
+        </main>
+        <Footer />
+      </div>
     </>
   )
 }

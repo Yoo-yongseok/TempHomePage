@@ -35,6 +35,15 @@
   --animate-fade-in: fadeIn 300ms ease-out;
   --animate-marquee: marquee 36s linear infinite;
   --animate-rise-in: riseIn 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+  /* 페이지 전환 — fill 없이(backwards만) 끝나면 transform·opacity를 풀어 fixed/sticky·모달 z-index에 영향 없음 */
+  --animate-page-in: pageIn 0.5s cubic-bezier(0.22, 1, 0.36, 1) backwards;
+
+  @keyframes pageIn {
+    from {
+      opacity: 0;
+      transform: translateY(12px);
+    }
+  }
 
   @keyframes s4fade {
     from {
