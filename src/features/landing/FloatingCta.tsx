@@ -1,12 +1,27 @@
+import { useEffect, useState } from 'react'
 import { ButtonLink } from '../../components/ui/ButtonLink'
 import { CTA, FLOATING } from '../../content/landing/groupD'
 import { useScrolledPast } from '../../lib/hooks'
 import { Wrap } from './primitives'
 
+/** 하단 문의 섹션(#contact)이 화면에 보이는 동안 true — 폼을 가리지 않도록 플로팅 CTA를 숨긴다 */
+function useContactInView() {
+  const [inView, setInView] = useState(false)
+  useEffect(() => {
+    const el = document.getElementById('contact')
+    if (!el) return
+    const io = new IntersectionObserver(([entry]) => setInView(entry.isIntersecting), { threshold: 0.05 })
+    io.observe(el)
+    return () => io.disconnect()
+  }, [])
+  return inView
+}
+
 // 헤더(z-50)·모달(z-[100])보다 아래에 깔리도록 z-40
 export function FloatingCta() {
-  const showBar = useScrolledPast(900)
-  const showSticky = useScrolledPast(600)
+  const contactInView = useContactInView()
+  const showBar = useScrolledPast(900) && !contactInView
+  const showSticky = useScrolledPast(600) && !contactInView
 
   return (
     <>

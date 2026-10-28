@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { ButtonLink } from '../../components/ui/ButtonLink'
 import { CloseIcon } from '../../components/ui/icons'
-import type { CaseItem } from '../../content/home'
+import { CASE_GALLERY, type CaseItem } from '../../content/home'
 import { lockScroll } from '../../lib/lenis'
 import { Placeholder } from '../../components/ui/Placeholder'
 
@@ -109,9 +109,51 @@ export function CaseModal({ item, onClose }: { item: CaseItem; onClose: () => vo
           </div>
 
           <div>
-            <SectionLabel>프로그램 개요</SectionLabel>
+            <SectionLabel>교육 개요</SectionLabel>
             <p className="mt-3 text-[14.5px] leading-[1.72] text-gray-600">{item.summary}</p>
           </div>
+
+          {(item.goals || item.curriculum) && (
+            <div className="grid gap-6 md:grid-cols-2">
+              {item.goals && (
+                <div>
+                  <SectionLabel>교육 목표</SectionLabel>
+                  <ul className="mt-3 flex flex-col gap-2">
+                    {item.goals.map((g) => (
+                      <li key={g} className="flex items-start gap-2 text-[14px] leading-[1.6] text-gray-600">
+                        <svg
+                          viewBox="0 0 24 24"
+                          aria-hidden
+                          className="mt-0.75 size-4 shrink-0 text-primary"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="2.6"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        >
+                          <path d="m5 12.5 4.5 4.5L19 7.5" />
+                        </svg>
+                        {g}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+              {item.curriculum && (
+                <div>
+                  <SectionLabel>교육 커리큘럼</SectionLabel>
+                  <ol className="mt-3 flex flex-col divide-y divide-gray-100 rounded-xl border border-gray-100">
+                    {item.curriculum.map((c, i) => (
+                      <li key={c} className="flex items-center gap-3 px-4 py-2.5 text-[14px] text-gray-700">
+                        <span className="text-[12px] font-bold text-primary tabular-nums">{i + 1}</span>
+                        {c}
+                      </li>
+                    ))}
+                  </ol>
+                </div>
+              )}
+            </div>
+          )}
 
           <div>
             <SectionLabel>주요 성과</SectionLabel>
@@ -130,10 +172,23 @@ export function CaseModal({ item, onClose }: { item: CaseItem; onClose: () => vo
             </ul>
           </div>
 
+          {item.comments && (
+            <div>
+              <SectionLabel>교육생 코멘트</SectionLabel>
+              <ul className="mt-3 flex flex-col gap-2">
+                {item.comments.map((c) => (
+                  <li key={c} className="rounded-xl bg-gray-50 px-4 py-3 text-[14px] leading-[1.6] text-gray-700">
+                    “{c}”
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+
           <div className="flex flex-col items-start gap-3 rounded-[14px] bg-[#f3f6ff] p-5 md:flex-row md:items-center md:justify-between">
-            <p className="text-[15px] font-semibold text-gray-900">우리 조직에도 이런 프로그램이 필요하신가요?</p>
-            <ButtonLink to="/contact" size="sm">
-              문의하기
+            <p className="text-[15px] font-semibold text-gray-900">{CASE_GALLERY.modalCta.text}</p>
+            <ButtonLink to={CASE_GALLERY.modalCta.to} size="sm">
+              {CASE_GALLERY.modalCta.label}
             </ButtonLink>
           </div>
         </div>

@@ -3,25 +3,24 @@ import { WHO, type WhoIcon } from '../../content/landing/groupA'
 import { Reveal, Section, SectionHead } from './primitives'
 
 const ICONS: Record<WhoIcon, ReactNode> = {
-  // 학사모
-  student: (
+  // 사람 + 체크리스트 (교육 담당자)
+  hr: (
     <>
-      <path d="M2.5 9 12 4.5 21.5 9 12 13.5 2.5 9Z" />
-      <path d="M6.5 11v4.6c0 1.4 2.5 2.9 5.5 2.9s5.5-1.5 5.5-2.9V11" />
-      <path d="M21.5 9v5.5" />
+      <circle cx="9" cy="8" r="3.5" />
+      <path d="M2.5 20c0-3.6 2.9-6 6.5-6s6.5 2.4 6.5 6" />
+      <path d="m15.5 9 1.8 1.8L21 7" />
     </>
   ),
-  // 교차 화살표 (이직)
-  switch: (
+  // 상승 막대 (팀 생산성)
+  team: (
     <>
-      <path d="M4 8h13" />
-      <path d="m14 4.5 3.5 3.5L14 11.5" />
-      <path d="M20 16H7" />
-      <path d="m10 12.5-3.5 3.5 3.5 3.5" />
+      <path d="M4 20V14M10 20V10M16 20V6" />
+      <path d="M3 20h18" />
+      <path d="m14 5 3-2.5L20 5" />
     </>
   ),
-  // 빌딩 (원본 아이콘)
-  building: (
+  // 빌딩 (경영진)
+  exec: (
     <>
       <rect x="4" y="3" width="10" height="18" rx="1.2" />
       <path d="M14 8h5a1 1 0 0 1 1 1v11a1 1 0 0 1-1 1h-5" />

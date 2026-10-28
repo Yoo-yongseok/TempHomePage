@@ -52,7 +52,7 @@ export function MethodSection() {
                 {i < METHOD.metrics.length - 1 && ', '}
               </span>
             ))}
-            . 숫자로 증명된 방식으로 함께합니다.
+            {METHOD.metricsSuffix}
           </p>
         </Reveal>
 

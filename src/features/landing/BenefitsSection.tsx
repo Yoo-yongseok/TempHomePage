@@ -9,7 +9,7 @@ const MOCKS: Record<BenefitMock, () => ReactNode> = {
   chat: () => <StudyChatMock />,
   app: () => (
     <div className="aspect-[1276/794] w-full max-w-[440px] overflow-hidden rounded-[20px] border border-[#e6e8ee] bg-white shadow-[0_1px_2px_#1018280a,0_28px_60px_-30px_#10182847]">
-      <Placeholder label="학습 앱 대시보드 화면" tone={0} />
+      <Placeholder label={BENEFITS.appLabel} tone={0} />
     </div>
   ),
   steps: () => <ConsultStepsMock />,

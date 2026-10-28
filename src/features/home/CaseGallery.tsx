@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
 import type { PointerEvent as ReactPointerEvent } from 'react'
 import { ButtonLink } from '../../components/ui/ButtonLink'
-import { CASES } from '../../content/home'
+import { CASE_GALLERY, CASES } from '../../content/home'
 import { clamp, useWindowWidth } from '../../lib/hooks'
 import { CaseModal } from './CaseModal'
 import { Placeholder } from '../../components/ui/Placeholder'
@@ -142,15 +142,15 @@ export function CaseGallery() {
   return (
     <section className="w-full overflow-hidden bg-white py-[80px] md:py-[100px]">
       <h2 className="px-6 text-center text-[28px] leading-[1.2] font-bold text-gray-900 md:text-[40px]">
-        한국AX협회가 함께한 <br className="md:hidden" />
-        커리어 성장 현장
+        {CASE_GALLERY.title[0]} <br className="md:hidden" />
+        {CASE_GALLERY.title[1]}
       </h2>
       <p className="mt-3 px-6 text-center text-[16px] leading-[1.4] font-normal tracking-[-0.18px] text-gray-500 md:text-[18px]">
-        교육부터 채용 박람회, 코칭까지 기업과 기관의 현장을 소개합니다
+        {CASE_GALLERY.subtitle}
       </p>
       <div className="mt-8 text-center">
-        <ButtonLink to="/news/newsroom" size="md">
-          현장 사례 전체보기 →
+        <ButtonLink to={CASE_GALLERY.more.to} size="md">
+          {CASE_GALLERY.more.label}
         </ButtonLink>
       </div>
 

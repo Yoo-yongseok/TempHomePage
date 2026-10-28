@@ -15,8 +15,8 @@ import { IntroQuoteSection } from '../features/landing/IntroQuoteSection'
 import { MethodSection } from '../features/landing/MethodSection'
 import { NewsSection } from '../features/landing/NewsSection'
 import { PlatformSection } from '../features/landing/PlatformSection'
-import { PricingSection } from '../features/landing/PricingSection'
 import { ProblemSection } from '../features/landing/ProblemSection'
+import { ProgramsSection } from '../features/landing/ProgramsSection'
 import { ReviewsSection } from '../features/landing/ReviewsSection'
 import { ValueSection } from '../features/landing/ValueSection'
 import { WhoSection } from '../features/landing/WhoSection'
@@ -24,6 +24,7 @@ import { WhoSection } from '../features/landing/WhoSection'
 export function HomePage() {
   return (
     <div className="flex w-full flex-col bg-white">
+      {/* B2B 흐름: 히어로·고객사 → 교육 사례 → 서비스 → 문제 → 해법 → 대상 → 근거 → 로드맵 → 후기 → 프로그램 → 절차 → FAQ → 문의 */}
       {/* 상단: 1번 사이트 UI */}
       <Hero />
       <BrandStrip />
@@ -44,10 +45,10 @@ export function HomePage() {
       <CompareSection />
       <ReviewsSection />
       <NewsSection />
-      <PricingSection />
+      <ProgramsSection />
       <HowToJoinSection />
-      <FinalCtaSection />
       <FaqSection />
+      <FinalCtaSection />
 
       <FloatingCta />
     </div>

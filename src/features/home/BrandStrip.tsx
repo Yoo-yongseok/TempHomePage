@@ -19,7 +19,7 @@ export function BrandStrip() {
     <section className="w-full bg-gray-50 px-6 py-6 md:px-[60px] md:py-10">
       <div
         role="img"
-        aria-label="파트너 기업 로고"
+        aria-label="교육 고객사 로고"
         className="group mx-auto w-full max-w-[1200px] overflow-hidden mask-[linear-gradient(90deg,transparent,#000_6%,#000_94%,transparent)]"
       >
         {/* 같은 로고 묶음을 두 번 이어 붙이고 -50%만큼 이동 → 이음매 없이 반복 */}

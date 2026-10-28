@@ -1,7 +1,8 @@
 import { Fragment, useEffect, useState } from 'react'
 import { ButtonLink } from '../../components/ui/ButtonLink'
+import { MultiLine } from '../../components/ui/MultiLine'
 import { Placeholder } from '../../components/ui/Placeholder'
-import { HERO_TRUST } from '../../content/home'
+import { HERO } from '../../content/home'
 import './home.css'
 
 const SLIDES = 5
@@ -43,26 +44,25 @@ export function Hero() {
       <div className="relative z-10 flex flex-col items-center gap-10 px-5 md:gap-[60px] md:px-10">
         <div className="flex flex-col items-center gap-4 text-center md:gap-5">
           <h1 className="text-[32px] leading-[1.2] font-bold tracking-[-0.5px] text-white 3xl:text-[67px]! md:text-[56px] md:tracking-normal">
-            커리어 고민의 끝,
+            {HERO.title[0]}
             <br />
-            한국AX협회
+            {HERO.title[1]}
           </h1>
           <p className="text-[16px] leading-[1.5] font-normal tracking-[-0.16px] text-white/90 md:text-[18px] md:leading-[1.4] md:tracking-[-0.18px]">
-            자격증부터 취업까지 한 번에 연결하는 <br className="md:hidden" />
-            커리어 종합 플랫폼입니다
+            <MultiLine text={HERO.subtitle} />
           </p>
         </div>
         <div className="flex flex-col items-center gap-5 md:gap-6">
           <div className="flex flex-wrap items-center justify-center gap-3 3xl:gap-[14px]">
-            <ButtonLink to="/contact" size="hero">
-              문의하기
+            <ButtonLink to={HERO.primary.to} size="hero">
+              {HERO.primary.label}
             </ButtonLink>
-            <ButtonLink to="/documents" size="hero" variant="outlineOnDark">
-              소개자료 받기
+            <ButtonLink to={HERO.secondary.to} size="hero" variant="outlineOnDark">
+              {HERO.secondary.label}
             </ButtonLink>
           </div>
           <p className="flex items-center gap-2.5 text-[13px] leading-[1.4] font-medium tracking-[-0.1px] text-white/70 md:text-[14px]">
-            {HERO_TRUST.map((text, i) => (
+            {HERO.trust.map((text, i) => (
               <Fragment key={text}>
                 {i > 0 && <span aria-hidden className="size-[3px] rounded-full bg-white/50" />}
                 <span>{text}</span>

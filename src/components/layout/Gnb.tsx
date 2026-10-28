@@ -159,7 +159,7 @@ export function Gnb() {
                   : 'border-gray-200 text-gray-700 hover:bg-gray-50'
               }`}
             >
-              소개자료 받기
+              소개서 받기
             </Link>
             <Link
               to="/contact"
@@ -270,7 +270,7 @@ export function Gnb() {
             to="/documents"
             className="flex h-12 items-center justify-center rounded-full border border-gray-200 text-[16px] font-semibold text-gray-700"
           >
-            소개자료 받기
+            소개서 받기
           </Link>
           <Link
             to="/contact"
