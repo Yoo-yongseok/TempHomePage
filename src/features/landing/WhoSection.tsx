@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react'
-import { WHO, type WhoIcon } from '../../content/landing/groupA'
+import { WHO, type WhoIcon } from '../../content/landing/why'
 import { Reveal, Section, SectionHead } from './primitives'
 
 const ICONS: Record<WhoIcon, ReactNode> = {

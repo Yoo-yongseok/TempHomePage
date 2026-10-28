@@ -1,4 +1,4 @@
-import { DEMO_INTERVIEW as D } from '../../../content/landing/groupB'
+import { DEMO_INTERVIEW as D } from '../../../content/landing/process'
 
 /** 3단계 데모 — 팀 프로젝트 발표 평가 (730×456 캔버스, 브라우저 크롬 목업) */
 export function InterviewScreen() {

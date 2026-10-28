@@ -1,7 +1,7 @@
 import { ButtonLink } from '../../components/ui/ButtonLink'
 import { MultiLine } from '../../components/ui/MultiLine'
 import { COMPANY } from '../../content/site'
-import { FINAL_CTA } from '../../content/landing/groupD'
+import { FINAL_CTA } from '../../content/landing/conversion'
 import { ContactForm } from '../contact/ContactForm'
 import { Reveal, Section } from './primitives'
 
@@ -20,7 +20,26 @@ export function FinalCtaSection() {
           <ButtonLink to={FINAL_CTA.secondary.to} variant="outlineWhite" size="box" className="mt-8">
             {FINAL_CTA.secondary.label}
           </ButtonLink>
-          <div className="mt-10 border-t border-white/10 pt-6 text-[15px] text-white/60">
+          <div className="mt-10 border-t border-white/10 pt-6">
+            <p className="text-[15px] font-semibold text-white/85">{FINAL_CTA.stepsLabel}</p>
+            <ol className="mt-4 flex flex-col gap-4">
+              {FINAL_CTA.steps.map((s, i) => (
+                <li key={s.title} className="flex gap-3.5">
+                  <span
+                    aria-hidden
+                    className="flex size-7 shrink-0 items-center justify-center rounded-full border border-white/20 text-[13px] font-bold text-signal-light tabular-nums"
+                  >
+                    {i + 1}
+                  </span>
+                  <div>
+                    <p className="font-semibold text-white">{s.title}</p>
+                    <p className="mt-0.5 text-[14px] leading-relaxed text-white/55">{s.desc}</p>
+                  </div>
+                </li>
+              ))}
+            </ol>
+          </div>
+          <div className="mt-8 border-t border-white/10 pt-6 text-[15px] text-white/60">
             <p className="font-semibold text-white/85">{FINAL_CTA.contactLabel}</p>
             <p className="mt-2 tabular-nums">{COMPANY.phone}</p>
             <p>{COMPANY.email}</p>

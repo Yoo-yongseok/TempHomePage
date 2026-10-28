@@ -1,4 +1,4 @@
-import { DEMO_REPORT as R } from '../../../content/landing/groupB'
+import { DEMO_REPORT as R } from '../../../content/landing/process'
 
 const LABEL = 'mb-3 text-[12px] font-extrabold tracking-[.03em] text-[#6b7280]'
 

@@ -1,8 +1,8 @@
 import { useEffect, useRef } from 'react'
 import { Placeholder } from '../../components/ui/Placeholder'
-import { INTRO } from '../../content/landing/groupA'
+import { INTRO } from '../../content/landing/why'
 import { Reveal } from './primitives'
-import './groupA.css'
+import './introQuote.css'
 
 export function IntroQuoteSection() {
   const sectionRef = useRef<HTMLElement>(null)

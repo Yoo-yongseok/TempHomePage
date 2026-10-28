@@ -1,5 +1,5 @@
 // 서비스 상세 페이지 콘텐츠 (B2B, 임시 문구) — 원본 1번 사이트의 서비스 페이지 템플릿 구조를 따른다
-// 사례 기업명은 익명 처리
+// 사례 기업명은 시그마인 기업 소개서 기준
 
 export type ServiceCase = { brand: string; title: string; date: string }
 
@@ -44,9 +44,13 @@ export const SERVICES: Service[] = [
     cases: {
       title: '맞춤형 AI 교육 대표 사례',
       items: [
-        { brand: '전자 S사', title: '임직원 대상 파이썬 데이터 분석, 3일 만에 실무 데이터 다루기', date: '2026-07-22' },
-        { brand: '금융 S사', title: 'AI 비즈니스 전문가 양성 과정, 업무 적용 과제 32건 도출', date: '2026-07-19' },
-        { brand: '뷰티 K사', title: '경영진·관리자가 함께 만든 우리 조직 맞춤 GPTs', date: '2026-06-30' },
+        { brand: '삼성전자', title: '임직원 대상 파이썬 데이터 분석, 3일 만에 실무 데이터 다루기', date: '2026-07-22' },
+        {
+          brand: '삼성화재',
+          title: '챗봇 기획부터 생성형 AI 도입까지, AI 비즈니스 전문가 양성 과정',
+          date: '2026-07-19',
+        },
+        { brand: 'KNU Cosmetics', title: '경영진·관리자가 함께 만든 우리 조직 맞춤 GPTs', date: '2026-06-30' },
       ],
     },
     cta: { text: '우리 조직에 맞는 AI 교육을\n한국AX협회와 함께 설계하세요', showSecondary: true },
@@ -75,13 +79,21 @@ export const SERVICES: Service[] = [
     cases: {
       title: 'AX 컨설팅 대표 사례',
       items: [
-        { brand: '투자사 T사', title: '투자 검토 리포트 작성, AI 자동화로 반복 업무 절반 줄이기', date: '2026-07-22' },
         {
-          brand: '식품·유통 H사',
-          title: 'DX 교육에서 나온 아이디어 45건, 자동화 과제로 이어지기까지',
+          brand: 'Pharm Nutrition',
+          title: '홈페이지 콘텐츠 업로드 자동화, 반복 입력·검수 업무 60% 이상 단축',
+          date: '2026-07-22',
+        },
+        {
+          brand: 'LOWORD',
+          title: '블로그 가치 평가 모델 개발, 평가·리포트 작성 시간 45% 이상 절감',
           date: '2026-07-10',
         },
-        { brand: '미디어 C사', title: '콘텐츠 기획부터 배포까지, 업무 흐름에 맞춘 AI 도입기', date: '2026-05-31' },
+        {
+          brand: '에스에스네트웍스',
+          title: '스마트팜 CCTV 인식 기능 개발, 건강 이상 조기 대응률 34% 향상',
+          date: '2026-05-31',
+        },
       ],
     },
     cta: { text: '우리 회사의 반복 업무,\n어디부터 줄일 수 있을지 확인하세요', showSecondary: true },
@@ -110,9 +122,13 @@ export const SERVICES: Service[] = [
     cases: {
       title: '맞춤형 AI 개발 대표 사례',
       items: [
-        { brand: '유통 D사', title: '사내 메신저 업무용 챗봇, 반복 문의 처리 시간 50% 절감', date: '2026-07-22' },
-        { brand: '공공기관 K사', title: '공문서 요약·작성 자동화로 반복 업무 70% 단축', date: '2026-07-21' },
-        { brand: '교육 S사', title: '맞춤형 AI 뉴스 큐레이션, 정보 탐색 시간 60% 단축', date: '2026-05-31' },
+        {
+          brand: '대한몰',
+          title: '사내 메신저 업무용 챗봇, 반복 문의·행정 처리 시간 50% 이상 절감',
+          date: '2026-07-22',
+        },
+        { brand: '한국청소년활동진흥원', title: '공문서 요약·작성 자동화로 반복 업무 70% 단축', date: '2026-07-21' },
+        { brand: 'ScopeLabs', title: '맞춤형 AI 뉴스 큐레이션, 정보 탐색 시간 60% 단축', date: '2026-05-31' },
       ],
     },
     cta: { text: '우리 업무에 꼭 맞는 AI를\n한국AX협회와 함께 만드세요' },

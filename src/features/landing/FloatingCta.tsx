@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { ButtonLink } from '../../components/ui/ButtonLink'
-import { CTA, FLOATING } from '../../content/landing/groupD'
+import { CTA, FLOATING } from '../../content/landing/conversion'
 import { useScrolledPast } from '../../lib/hooks'
 import { Wrap } from './primitives'
 
@@ -35,7 +35,7 @@ export function FloatingCta() {
       >
         <div className="flex items-center gap-4 rounded-full border border-rule bg-white/90 p-2 pl-6 shadow-[0_8px_30px_rgba(0,0,0,0.12)] backdrop-blur">
           <span className="text-[15px] font-semibold whitespace-nowrap text-ink">{FLOATING.copy}</span>
-          <ButtonLink to={CTA.to} variant="signal" size="box" className="rounded-full!">
+          <ButtonLink to={CTA.to} variant="signal" size="box" className="rounded-full! whitespace-nowrap">
             {CTA.label}
           </ButtonLink>
         </div>

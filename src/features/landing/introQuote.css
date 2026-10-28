@@ -1,0 +1,80 @@
+/* #intro 인용 섹션 — Tailwind로 표현하기 어려운 clip-path·의사요소 */
+
+/* #intro 스크롤 확장 — 가운데 둥근 카드(상하 6%·좌우 14%) → 풀블리드. --reveal(0→1)은 IntroQuoteSection이 갱신 */
+#intro {
+  --inv: calc(1 - var(--reveal, 0));
+  --inset-y: calc(6% * var(--inv));
+  --inset-x: calc(14% * var(--inv));
+}
+.intro-quote-frame {
+  position: absolute;
+  inset: 0;
+  clip-path: inset(var(--inset-y) var(--inset-x) round calc(32px * var(--inv)));
+  will-change: clip-path;
+}
+.intro-quote-shade {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(to top right, #06080ed9 0%, #06080e80 42%, #06080e26 100%),
+    radial-gradient(60% 50% at 0% 100%, #2563eb2e 0%, #0000 70%);
+}
+
+/* 인용 카드 — 사진 안쪽 좌하단(모바일 좌상단), 사진 inset을 따라 함께 이동 */
+.intro-quote-anchor {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: flex;
+  align-items: flex-end;
+  padding: calc(var(--inset-y) + clamp(1.25rem, 4vw, 3.5rem)) calc(var(--inset-x) + clamp(1.25rem, 4vw, 3.5rem));
+  pointer-events: none;
+}
+.intro-quote-card {
+  max-width: 540px;
+  padding: clamp(1.5rem, 3vw, 2.25rem);
+  border: 1px solid #ffffff2e;
+  border-radius: 24px;
+  background: linear-gradient(160deg, #ffffff1f 0%, #ffffff0a 100%);
+  box-shadow:
+    inset 0 1px 0 #ffffff26,
+    0 30px 60px -30px #00000099;
+  -webkit-backdrop-filter: blur(18px) saturate(140%);
+  backdrop-filter: blur(18px) saturate(140%);
+  pointer-events: auto;
+}
+.intro-quote-glyph {
+  display: block;
+  height: 2.6rem;
+  margin-bottom: 0.5rem;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 5.5rem;
+  line-height: 0.9;
+  color: var(--color-signal-light);
+}
+@media (max-width: 767px) {
+  #intro {
+    --inset-y: calc(4% * var(--inv));
+    --inset-x: calc(5% * var(--inv));
+  }
+  .intro-quote-frame {
+    clip-path: inset(var(--inset-y) var(--inset-x) round calc(24px * var(--inv)));
+  }
+  .intro-quote-anchor {
+    align-items: flex-start;
+  }
+  .intro-quote-shade {
+    background:
+      linear-gradient(to bottom right, #06080ed9 0%, #06080e8c 50%, #06080e40 100%),
+      radial-gradient(70% 50% at 0% 0%, #2563eb2e 0%, #0000 70%);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  #intro {
+    --reveal: 1;
+  }
+  .intro-quote-frame {
+    clip-path: none;
+    will-change: auto;
+  }
+}

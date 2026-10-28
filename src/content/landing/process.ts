@@ -1,94 +1,4 @@
-// 랜딩 하단 B그룹(운영 지원·운영 관리·교육 로드맵·가치) — B2B 기업교육 흐름 (수치는 임시값)
-
-export type BenefitMock = 'chat' | 'app' | 'steps'
-
-export type BenefitRow = {
-  label: string
-  title: string
-  desc: string
-  mock: BenefitMock
-}
-
-export const BENEFITS = {
-  title: '교육 담당자를 위한 운영 지원',
-  /** app 목업 자리 표시 문구 */
-  appLabel: '교육 운영 대시보드 화면',
-  rows: [
-    {
-      label: '교육 전용 Q&A 채널',
-      title: '교육 중에도, 끝난 뒤에도\n전용 채널에서 질문',
-      desc: '실습 녹화본과 예제 데이터를 교육 전용 채널로 전달하고,\n현업에 적용하다 막히는 부분은 바로 질문할 수 있습니다.',
-      mock: 'chat',
-    },
-    {
-      label: '교육 운영 대시보드',
-      title: '출결·과제·만족도를\n담당자 화면 하나로',
-      desc: '교육 담당자는 출결과 과제 제출, 만족도 결과를\n대시보드에서 한눈에 확인하고 보고 자료로 내려받습니다.',
-      mock: 'app',
-    },
-    {
-      label: '사후 AX 컨설팅',
-      title: '교육 후에도\nAX 도입 컨설팅까지',
-      desc: '교육으로 끝나지 않습니다. 교육 중 도출한 자동화 과제를 실제 업무에 도입할 수 있도록 컨설팅으로 이어갑니다.',
-      mock: 'steps',
-    },
-  ] as BenefitRow[],
-}
-
-/** 운영 지원 1 — 교육 전용 Q&A 채널 채팅 카드 */
-export const BENEFIT_CHAT = {
-  lounge: '교육 Q&A 채널',
-  room: 'S사 데이터 분석 과정',
-  members: '38명',
-  status: '실시간',
-  date: '6월 14일 토요일',
-  manager: {
-    avatar: '매',
-    name: '한국AX협회 교육매니저',
-    time: '오후 7:12',
-    text: '2일차 실습 녹화본과 예제 데이터 올려드려요. 팀 데이터로 적용하다 막히면 언제든 질문 남겨주세요!',
-  },
-  video: { title: '2일차 실습 다시보기', duration: '52:10' },
-  reply: { text: '감사합니다! 우리 팀 매출 데이터로 다시 해볼게요', time: '오후 7:15', read: '읽음' },
-  input: '메시지를 입력하세요',
-}
-
-export type ConsultStepStatus = 'done' | 'current' | 'upcoming'
-
-/** 운영 지원 3 — 사후 AX 컨설팅 진행 체크리스트 */
-export const BENEFIT_STEPS = {
-  label: '사후 AX 컨설팅',
-  chip: '맞춤',
-  progressSuffix: '완료',
-  steps: [
-    { title: '교육 성과 리포트 전달', meta: '6월 20일 완료', status: 'done' },
-    { title: '자동화 과제 우선순위 정리', meta: '6월 27일 완료', status: 'done' },
-    { title: 'AX 프로그램 시범 도입', meta: '담당 컨설턴트와 진행 중', status: 'current' },
-    { title: '도입 효과 측정·고도화', meta: '도입 후 예정', status: 'upcoming' },
-  ] as { title: string; meta: string; status: ConsultStepStatus }[],
-  note: '교육 수료 후 제공',
-}
-
-export const PLATFORM = {
-  title: '교육 운영부터 성과 측정까지, 담당자 화면 하나로 관리합니다',
-  steps: [
-    {
-      title: '운영 관리',
-      desc: '차수별 일정과 출결, 교육생 명단을 한 화면에서 관리하고 변경 사항을 바로 공유합니다.',
-    },
-    {
-      title: '과제 관리',
-      desc: '교육생이 제출한 실습 과제와 강사 피드백을 모아, 현업 적용 과제로 이어질 후보를 고릅니다.',
-    },
-    {
-      title: '성과 관리',
-      desc: '사전 진단 대비 교육 후 변화와 만족도를 리포트로 정리해 내부 보고에 그대로 씁니다.',
-    },
-  ],
-  image: '교육 운영 대시보드 화면',
-  chipName: '한국AX협회 교육 대시보드',
-  chipText: '출결·과제·만족도·성과를 한곳에서 확인하는 담당자 전용 화면',
-}
+// 도입 프로세스 — 4단계 로드맵(진단 → 실습 → 현업 적용 → 사후 컨설팅)과 단계별 데모 화면 (예시 수치는 임시값)
 
 export type DemoKind = 'report' | 'resume' | 'interview'
 
@@ -112,7 +22,7 @@ export type CurriWeek = {
 }
 
 export const CURRICULUM = {
-  title: '진단부터 현업 적용까지, 기업 맞춤 교육 로드맵',
+  title: '진단부터 현업 적용까지, 이렇게 진행합니다',
   /** 브라우저 프레임 주소창 — 뒤에 /{demo} */
   host: 'koreaax.app',
   tabsLabel: '단계별 교육 과정',
@@ -234,32 +144,4 @@ export const DEMO_INTERVIEW = {
   ],
   feedback: ['실제 문의 데이터로 검증한 점이 좋습니다.', '도입 전후 처리 시간을 함께 측정해 보세요.'],
   next: '다음 단계: AX 프로그램 시범 도입',
-}
-
-export const VALUE = {
-  title: '교육 한 번으로\n조직에 이만큼 남깁니다',
-  /** 각 열의 제목 — columns와 같은 순서 */
-  headings: ['배우는 것', '조직에 남는 것', '함께 받는 지원'],
-  columns: [
-    [
-      { title: '생성형 AI 업무 활용', desc: '프롬프트 설계부터 GPTs 제작까지' },
-      { title: '파이썬 데이터 분석', desc: 'Pandas로 데이터 정제·요약·병합' },
-      { title: '업무 자동화 설계', desc: '반복 업무를 찾아 자동화 흐름으로 정리' },
-      { title: 'AI 비즈니스 활용 전략', desc: '부서별 도입 우선순위와 기대 효과 산정' },
-      { title: '데이터 시각화', desc: '분석 결과를 보고서·대시보드로 전달' },
-    ],
-    [
-      { title: '조직 AI 활용도 리포트', desc: '교육 전후를 비교하는 진단 기록' },
-      { title: '부서별 맞춤 GPTs', desc: '교육생이 직접 만든 업무 도구' },
-      { title: '자동화 과제 목록', desc: '효과·난이도를 평가한 도입 후보' },
-      { title: '사내 AI 활용 가이드', desc: '다음 교육과 확산에 쓰는 기준 문서' },
-    ],
-    [
-      { title: '교육 운영 대시보드', desc: '출결·과제·만족도를 한곳에서 관리' },
-      { title: '사후 AX 컨설팅', desc: '도출한 과제를 실제 업무에 도입' },
-      { title: '실습 녹화본 제공', desc: '교육 후에도 반복 학습' },
-      { title: '교육 전용 Q&A 채널', desc: '강사·매니저에게 실시간 질문' },
-      { title: '성과 리포트 작성 지원', desc: '내부 보고용 자료로 바로 활용' },
-    ],
-  ],
 }

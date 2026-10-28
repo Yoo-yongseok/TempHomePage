@@ -1,5 +1,5 @@
 import { ButtonLink } from '../../components/ui/ButtonLink'
-import { CTA, PROGRAMS } from '../../content/landing/groupD'
+import { CTA, PROGRAMS } from '../../content/landing/conversion'
 import { Reveal, Section, SectionHead, cardClass } from './primitives'
 
 const Check = () => (
@@ -21,7 +21,7 @@ const Check = () => (
 export function ProgramsSection() {
   const { title, sub, labels, items, quote, note } = PROGRAMS
   return (
-    <Section id="programs" tone="white">
+    <Section id="programs" tone="gray">
       <SectionHead title={title} sub={sub} />
       <Reveal stagger className="grid gap-5 md:grid-cols-3 md:gap-6">
         {items.map((p) => (
@@ -54,6 +54,10 @@ export function ProgramsSection() {
                 </li>
               ))}
             </ul>
+            {/* 같은 형태로 진행한 실제 교육 이력 — 카드 하단에 고정 */}
+            <p className="mt-auto pt-6 text-[13.5px] leading-relaxed text-mute">
+              <span className="font-semibold text-ink">{labels.refs}</span> · {p.refs}
+            </p>
           </article>
         ))}
       </Reveal>

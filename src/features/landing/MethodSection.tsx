@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react'
-import { METHOD, type MethodIcon } from '../../content/landing/groupA'
+import { METHOD, type MethodIcon } from '../../content/landing/why'
 import { Reveal, Section } from './primitives'
 
 const ICONS: Record<MethodIcon, ReactNode> = {

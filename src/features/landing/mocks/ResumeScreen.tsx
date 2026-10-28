@@ -1,4 +1,4 @@
-import { DEMO_RESUME as R } from '../../../content/landing/groupB'
+import { DEMO_RESUME as R } from '../../../content/landing/process'
 
 const LABEL = 'mb-[9px] text-[11px] font-extrabold tracking-[.04em] text-[#7a818e]'
 

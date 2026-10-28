@@ -1,7 +1,7 @@
 import { Link } from 'react-router'
 import { ButtonLink } from '../../components/ui/ButtonLink'
 import { Placeholder } from '../../components/ui/Placeholder'
-import { NEWS_SECTION } from '../../content/landing/groupC'
+import { NEWS_SECTION } from '../../content/landing/proof'
 import { newsPath } from '../../content/menu'
 import { NEWS_BOARDS } from '../../content/news'
 import { MonoLabel, Reveal, Section, SectionHead, cardClass } from './primitives'

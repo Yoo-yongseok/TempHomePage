@@ -14,7 +14,7 @@ export const CONTACT_FORM = {
     '파이썬 데이터 분석',
     '데이터 시각화',
     '업무 자동화',
-    'AI 리터러시 특강',
+    'AI 업무 활용 특강',
     '맞춤형 AI 개발',
   ],
   fields: {

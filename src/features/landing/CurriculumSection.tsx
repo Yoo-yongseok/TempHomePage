@@ -1,5 +1,5 @@
 import { useId, useState, type KeyboardEvent, type ReactNode } from 'react'
-import { CURRICULUM, type CurriWeek, type DemoKind } from '../../content/landing/groupB'
+import { CURRICULUM, type CurriWeek, type DemoKind } from '../../content/landing/process'
 import { useReveal } from '../../lib/useReveal'
 import { Reveal, Section, SectionHead } from './primitives'
 import { BrowserFrame } from './mocks/BrowserFrame'

@@ -1,52 +1,41 @@
-import { BrandStrip } from '../features/home/BrandStrip'
-import { CaseGallery } from '../features/home/CaseGallery'
+import { ClientStrip } from '../features/home/ClientStrip'
 import { Hero } from '../features/home/Hero'
 import { Solution } from '../features/home/Solution'
-import { BenefitsSection } from '../features/landing/BenefitsSection'
 import { CoachSection } from '../features/landing/CoachSection'
 import { CompareSection } from '../features/landing/CompareSection'
-import { ConeSolutionSection } from '../features/landing/ConeSolutionSection'
 import { CurriculumSection } from '../features/landing/CurriculumSection'
 import { FaqSection } from '../features/landing/FaqSection'
+import { FeaturedCasesSection } from '../features/landing/FeaturedCasesSection'
 import { FinalCtaSection } from '../features/landing/FinalCtaSection'
 import { FloatingCta } from '../features/landing/FloatingCta'
-import { HowToJoinSection } from '../features/landing/HowToJoinSection'
 import { IntroQuoteSection } from '../features/landing/IntroQuoteSection'
 import { MethodSection } from '../features/landing/MethodSection'
 import { NewsSection } from '../features/landing/NewsSection'
-import { PlatformSection } from '../features/landing/PlatformSection'
-import { ProblemSection } from '../features/landing/ProblemSection'
 import { ProgramsSection } from '../features/landing/ProgramsSection'
-import { ReviewsSection } from '../features/landing/ReviewsSection'
-import { ValueSection } from '../features/landing/ValueSection'
+import { ServiceTracksSection } from '../features/landing/ServiceTracksSection'
 import { WhoSection } from '../features/landing/WhoSection'
 
+// B2B 구매 흐름: 신뢰(고객사) → 문제(일반 교육과 비교) → 무엇을(서비스 소개 스크롤 탭 → 서비스별 레퍼런스)
+// → 증명(대표 사례·인용·강점) → 어떻게(프로세스·대상·교육 형태) → 누가(전문가) → 전환(FAQ·문의 폼)
 export function HomePage() {
   return (
     <div className="flex w-full flex-col bg-white">
-      {/* B2B 흐름: 히어로·고객사 → 교육 사례 → 서비스 → 문제 → 해법 → 대상 → 근거 → 로드맵 → 후기 → 프로그램 → 절차 → FAQ → 문의 */}
-      {/* 상단: 1번 사이트 UI */}
       <Hero />
-      <BrandStrip />
-      <CaseGallery />
-      <Solution />
+      <ClientStrip />
 
-      {/* 하단: 2번 사이트 UI */}
-      <ProblemSection />
-      <ConeSolutionSection />
-      <WhoSection />
+      <CompareSection />
+      <Solution />
+      <ServiceTracksSection />
+      <FeaturedCasesSection />
       <IntroQuoteSection />
       <MethodSection />
-      <BenefitsSection />
-      <PlatformSection />
+
       <CurriculumSection />
-      <ValueSection />
-      <CoachSection />
-      <CompareSection />
-      <ReviewsSection />
-      <NewsSection />
+      <WhoSection />
       <ProgramsSection />
-      <HowToJoinSection />
+      <CoachSection />
+
+      <NewsSection />
       <FaqSection />
       <FinalCtaSection />
 
