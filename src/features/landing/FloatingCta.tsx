@@ -1,27 +1,12 @@
-import { useEffect, useState } from 'react'
 import { ButtonLink } from '../../components/ui/ButtonLink'
-import { CTA, FLOATING } from '../../content/landing/conversion'
+import { CTA, FLOATING } from '../../content/landing/groupD'
 import { useScrolledPast } from '../../lib/hooks'
 import { Wrap } from './primitives'
 
-/** 하단 문의 섹션(#contact)이 화면에 보이는 동안 true — 폼을 가리지 않도록 플로팅 CTA를 숨긴다 */
-function useContactInView() {
-  const [inView, setInView] = useState(false)
-  useEffect(() => {
-    const el = document.getElementById('contact')
-    if (!el) return
-    const io = new IntersectionObserver(([entry]) => setInView(entry.isIntersecting), { threshold: 0.05 })
-    io.observe(el)
-    return () => io.disconnect()
-  }, [])
-  return inView
-}
-
 // 헤더(z-50)·모달(z-[100])보다 아래에 깔리도록 z-40
 export function FloatingCta() {
-  const contactInView = useContactInView()
-  const showBar = useScrolledPast(900) && !contactInView
-  const showSticky = useScrolledPast(600) && !contactInView
+  const showBar = useScrolledPast(900)
+  const showSticky = useScrolledPast(600)
 
   return (
     <>
@@ -35,7 +20,7 @@ export function FloatingCta() {
       >
         <div className="flex items-center gap-4 rounded-full border border-rule bg-white/90 p-2 pl-6 shadow-[0_8px_30px_rgba(0,0,0,0.12)] backdrop-blur">
           <span className="text-[15px] font-semibold whitespace-nowrap text-ink">{FLOATING.copy}</span>
-          <ButtonLink to={CTA.to} variant="signal" size="box" className="rounded-full! whitespace-nowrap">
+          <ButtonLink to={CTA.to} variant="signal" size="box" className="rounded-full!">
             {CTA.label}
           </ButtonLink>
         </div>

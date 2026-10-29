@@ -1,8 +1,8 @@
 import { useEffect, useRef } from 'react'
 import { Placeholder } from '../../components/ui/Placeholder'
-import { INTRO } from '../../content/landing/why'
+import { INTRO } from '../../content/landing/groupA'
 import { Reveal } from './primitives'
-import './introQuote.css'
+import './groupA.css'
 
 export function IntroQuoteSection() {
   const sectionRef = useRef<HTMLElement>(null)
@@ -38,13 +38,17 @@ export function IntroQuoteSection() {
     }
   }, [])
 
-  const { quote, author, photoLabel } = INTRO
+  const { quote, author, photoLabel, photo } = INTRO
 
   return (
     <section id="intro" ref={sectionRef} className="relative h-[clamp(480px,78vh,800px)] overflow-hidden bg-white">
       <div className="intro-quote-frame">
         <div className="absolute inset-0 bg-[#0b1220]">
-          <Placeholder palette="dark" tone={4} label={photoLabel} hideLabel hideIcon />
+          {photo ? (
+            <img src={photo} alt="" className="size-full object-cover" />
+          ) : (
+            <Placeholder palette="dark" tone={4} label={photoLabel} hideLabel hideIcon />
+          )}
         </div>
         <div aria-hidden className="intro-quote-shade" />
       </div>

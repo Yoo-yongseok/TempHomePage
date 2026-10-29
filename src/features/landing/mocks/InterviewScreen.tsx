@@ -1,6 +1,6 @@
-import { DEMO_INTERVIEW as D } from '../../../content/landing/process'
+import { DEMO_INTERVIEW as D } from '../../../content/landing/groupB'
 
-/** 3단계 데모 — 팀 프로젝트 발표 평가 (730×456 캔버스, 브라우저 크롬 목업) */
+/** 3단계 데모 — 현업 프로젝트 평가 (730×456 캔버스, 브라우저 크롬 목업) */
 export function InterviewScreen() {
   return (
     <div className="flex h-full w-full flex-col overflow-hidden bg-white text-[#14151a]">
@@ -43,7 +43,7 @@ export function InterviewScreen() {
             </div>
           </div>
           <div className="rounded-xl border border-black/[0.07] bg-white p-3.5">
-            <p className="mb-2 text-[11px] font-extrabold tracking-[.03em] text-[#6b7280]">{D.feedbackLabel}</p>
+            <p className="mb-2 text-[11px] font-extrabold tracking-[.03em] text-[#6b7280]">{D.labels.feedback}</p>
             {D.feedback.map((f, i) => (
               <div key={f} className="my-1.5 flex items-center gap-2 text-[12.5px] font-semibold">
                 <span
@@ -83,7 +83,7 @@ export function InterviewScreen() {
           </div>
         </div>
         <div className="flex min-w-0 flex-1 flex-col rounded-xl border border-black/[0.07] bg-white p-3.5">
-          <p className="text-[11px] font-extrabold tracking-[.03em] text-[#6b7280]">{D.scoreLabel}</p>
+          <p className="text-[11px] font-extrabold tracking-[.03em] text-[#6b7280]">{D.labels.score}</p>
           <div className="mt-2 flex items-baseline gap-1">
             <span className="text-[34px] leading-none font-extrabold text-[#2f6bff]">{D.total}</span>
             <span className="text-[13px] font-bold text-[#8b909b]">/ 100</span>
@@ -105,7 +105,7 @@ export function InterviewScreen() {
             ))}
           </div>
           <span className="mt-auto rounded-lg bg-[#e9f0ff] px-[11px] py-1.5 text-center text-[11.5px] font-bold text-[#2f6bff]">
-            {D.next}
+            다음 연습: 전달력 집중 질문 5개
           </span>
         </div>
       </div>

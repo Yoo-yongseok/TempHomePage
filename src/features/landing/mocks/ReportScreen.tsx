@@ -1,8 +1,8 @@
-import { DEMO_REPORT as R } from '../../../content/landing/process'
+import { DEMO_REPORT as R } from '../../../content/landing/groupB'
 
 const LABEL = 'mb-3 text-[12px] font-extrabold tracking-[.03em] text-[#6b7280]'
 
-/** 1단계 데모 — 조직 AI 활용도 진단 리포트 (730×456 캔버스) */
+/** 1단계 데모 — 조직 AI 활용 진단 리포트 (730×456 캔버스) */
 export function ReportScreen() {
   return (
     <div className="flex h-full w-full flex-col bg-[#fbfcfe] px-[30px] py-[26px] text-[#14151a]">
@@ -12,7 +12,7 @@ export function ReportScreen() {
       </div>
       <div className="mt-5 grid flex-1 grid-cols-2 gap-x-[26px] gap-y-[22px]">
         <div>
-          <p className={LABEL}>{R.labels.overall}</p>
+          <p className={LABEL}>{R.labels.score}</p>
           <div className="flex items-center gap-[22px]">
             <div
               className="flex size-[104px] shrink-0 items-center justify-center rounded-full"
@@ -25,7 +25,7 @@ export function ReportScreen() {
             <div className="text-[13.5px] font-semibold">
               <div className="my-[7px] flex items-center gap-2">
                 <span className="size-[11px] rounded-[3px] bg-[#2f6bff]" />
-                {R.labels.done} {R.score}%
+                {R.labels.ready} {R.score}%
               </div>
               <div className="my-[7px] flex items-center gap-2">
                 <span className="size-[11px] rounded-[3px] bg-[#f2647c]" />
@@ -43,10 +43,7 @@ export function ReportScreen() {
                   <span className="mr-[7px] font-extrabold text-[#2f6bff]">{i + 1}</span>
                   {s.name}
                 </span>
-                <span>
-                  {s.value}
-                  {R.labels.unit}
-                </span>
+                <span>{s.value}점</span>
               </div>
               <div className="h-2 overflow-hidden rounded-[5px] bg-[#eceef2]">
                 <div

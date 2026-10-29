@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react'
-import { METHOD, type MethodIcon } from '../../content/landing/why'
+import { METHOD, type MethodIcon } from '../../content/landing/groupA'
 import { Reveal, Section } from './primitives'
 
 const ICONS: Record<MethodIcon, ReactNode> = {
@@ -52,7 +52,7 @@ export function MethodSection() {
                 {i < METHOD.metrics.length - 1 && ', '}
               </span>
             ))}
-            {METHOD.metricsSuffix}
+            . 숫자로 증명된 방식으로 함께합니다.
           </p>
         </Reveal>
 

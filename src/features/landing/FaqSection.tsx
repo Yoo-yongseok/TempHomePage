@@ -1,4 +1,4 @@
-import { FAQ } from '../../content/landing/conversion'
+import { FAQ } from '../../content/landing/groupD'
 import { Reveal, Section, SectionHead } from './primitives'
 
 export function FaqSection() {

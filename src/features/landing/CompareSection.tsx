@@ -1,4 +1,4 @@
-import { COMPARE } from '../../content/landing/proof'
+import { COMPARE } from '../../content/landing/groupC'
 import { Reveal, Section, SectionHead } from './primitives'
 
 const svg = {

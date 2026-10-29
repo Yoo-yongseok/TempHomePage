@@ -1,5 +1,5 @@
 import { Placeholder } from '../../components/ui/Placeholder'
-import { COACH } from '../../content/landing/proof'
+import { COACH } from '../../content/landing/groupC'
 import { Reveal, Section, Sig } from './primitives'
 
 /** 다크 섹션 — 좌 프로필 사진 카드 / 우 소개 + 이력 칩 (모바일은 세로 배치) */

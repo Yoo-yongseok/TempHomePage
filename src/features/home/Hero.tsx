@@ -1,6 +1,5 @@
 import { Fragment, useEffect, useState } from 'react'
 import { ButtonLink } from '../../components/ui/ButtonLink'
-import { MultiLine } from '../../components/ui/MultiLine'
 import { Placeholder } from '../../components/ui/Placeholder'
 import { HERO } from '../../content/home'
 import './home.css'
@@ -49,7 +48,7 @@ export function Hero() {
             {HERO.title[1]}
           </h1>
           <p className="text-[16px] leading-[1.5] font-normal tracking-[-0.16px] text-white/90 md:text-[18px] md:leading-[1.4] md:tracking-[-0.18px]">
-            <MultiLine text={HERO.subtitle} />
+            {HERO.subtitle}
           </p>
         </div>
         <div className="flex flex-col items-center gap-5 md:gap-6">
