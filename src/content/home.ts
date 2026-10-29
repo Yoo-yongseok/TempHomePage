@@ -8,7 +8,7 @@ export const HERO = {
   primary: { label: '교육 문의하기', to: '/contact' },
   secondary: { label: '소개서 받기', to: '/documents' },
   /** CTA 아래 신뢰 문구 */
-  trust: ['기업·기관 15곳과 함께', '4시간 특강부터 3일 과정까지'],
+  trust: ['기업·기관 14곳과 함께', '4시간 특강부터 3일 과정까지'],
 }
 
 // ── 고객사 로고 띠 ─────────────────────────────────────────────
@@ -16,7 +16,7 @@ export const HERO = {
 /** scale: 로고 높이 보정(1 = 띠 높이 전체). 정사각 엠블럼은 키우고 납작한 워드마크는 줄인다 */
 export type ClientLogo = { name: string; src?: string; scale?: number }
 
-/** 소개서 12~16p의 교육·구축 고객사. src가 없으면 이름으로 표시 */
+/** 소개서 12~16p의 교육·구축 고객사 (로고를 확인한 곳만). src가 없으면 이름으로 표시 */
 export const CLIENTS: ClientLogo[] = [
   { name: '삼성전자', src: '/logos/samsung-electronics.svg', scale: 0.6 },
   { name: '삼성화재', src: '/logos/samsung-fire.svg' },
@@ -30,7 +30,6 @@ export const CLIENTS: ClientLogo[] = [
   { name: '한국청소년활동진흥원', src: '/logos/kywa.png' },
   { name: 'ScopeLabs', src: '/logos/scopelabs.png', scale: 0.7 },
   { name: 'Pharm Nutrition', src: '/logos/pharm-nutrition.svg' },
-  { name: '에스에스네트웍스' },
   { name: '대한몰', src: '/logos/daehanmall.png' },
   { name: 'LOWORD', src: '/logos/loword.png', scale: 0.6 },
 ]
@@ -105,11 +104,12 @@ export const CASES: CaseItem[] = [
     tone: 4,
   },
   {
-    tags: ['AX 구축', 'AI 비전'],
-    title: '에스에스네트웍스 스마트팜 CCTV 행동 인식',
-    meta: 'AX 컨설팅 · 맞춤형 AI 개발',
-    summary: 'CCTV 영상에서 개체별 자세와 행동을 자동 분류하고, 이상 징후가 보이면 즉시 알림을 보냅니다.',
-    results: ['건강 이상 조기 대응률 34% 향상', '진료비·폐사 손실 12% 감소'],
+    tags: ['기업 교육', '생성형 AI'],
+    title: 'KNU Cosmetics GPT 활용 교육',
+    meta: '오프라인 · 총 8시간 · 경영진 + 관리자',
+    summary: 'AI/GPT를 활용한 업무 혁신 전략을 배우고, 조직에 맞는 GPT 도구를 직접 만드는 과정입니다.',
+    resultsLabel: '교육 구성',
+    results: ['8시간 총 교육', '프롬프트 엔지니어링', '맞춤형 GPTs 만들기'],
     images: 3,
     tone: 5,
   },

@@ -67,7 +67,7 @@ export const METHOD = {
   title: '검증된 한국AX협회\n기업 AX 교육을 제공해드립니다',
   metrics: [
     { value: '9곳', label: '맞춤 교육 진행 기업·기관' },
-    { value: '6건', label: 'AI 자동화 구축 사례' },
+    { value: '5건', label: 'AI 자동화 구축 사례' },
     { value: '4h~3일', label: '목적별 교육 과정' },
   ],
   cards: [

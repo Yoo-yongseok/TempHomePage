@@ -89,11 +89,6 @@ export const SERVICES: Service[] = [
           title: '블로그 가치 평가 모델 개발, 평가·리포트 작성 시간 45% 이상 절감',
           date: '2026-07-10',
         },
-        {
-          brand: '에스에스네트웍스',
-          title: '스마트팜 CCTV 인식 기능 개발, 건강 이상 조기 대응률 34% 향상',
-          date: '2026-05-31',
-        },
       ],
     },
     cta: { text: '우리 회사의 반복 업무,\n어디부터 줄일 수 있을지 확인하세요', showSecondary: true },
