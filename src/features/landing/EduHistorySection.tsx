@@ -9,15 +9,15 @@ export function EduHistorySection() {
     <Section id="edu-history" tone="white">
       <SectionHead title={title} sub={sub} />
 
-      <Reveal className="mx-auto grid max-w-[1080px] items-start gap-6 md:grid-cols-[1fr_1.1fr] md:gap-10">
-        <div className="grid grid-cols-2 gap-3 md:grid-cols-1 md:gap-4">
+      <Reveal className="mx-auto grid max-w-[1080px] items-start gap-6 md:items-stretch md:grid-cols-[1fr_1.1fr] md:gap-10">
+        <div className="grid grid-cols-2 gap-3 md:grid-cols-1 md:grid-rows-2 md:gap-4">
           {photos.map((p) => (
             <img
               key={p.src}
               src={p.src}
               alt={p.alt}
               loading="lazy"
-              className="aspect-[16/9] w-full rounded-[18px] border border-[#eceef2] object-cover md:aspect-[2.26/1]"
+              className="aspect-[16/9] w-full rounded-[18px] border border-[#eceef2] object-cover md:aspect-auto md:h-full md:min-h-0"
             />
           ))}
         </div>
