@@ -123,7 +123,6 @@ export const SERVICES: Service[] = [
           date: '2026-07-22',
         },
         { brand: '한국청소년활동진흥원', title: '공문서 요약·작성 자동화로 반복 업무 70% 단축', date: '2026-07-21' },
-        { brand: 'ScopeLabs', title: '맞춤형 AI 뉴스 큐레이션, 정보 탐색 시간 60% 단축', date: '2026-05-31' },
       ],
     },
     cta: { text: '우리 업무에 꼭 맞는 AI를\n한국AX협회와 함께 만드세요' },

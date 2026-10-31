@@ -28,7 +28,6 @@ export const CLIENTS: ClientLogo[] = [
   { name: '탭엔젤파트너스', src: '/logos/tabangel.png' },
   { name: '크리에이티브 디스패치', src: '/logos/creative-dispatch.png', scale: 0.75 },
   { name: '한국청소년활동진흥원', src: '/logos/kywa.png' },
-  { name: 'ScopeLabs', src: '/logos/scopelabs.png', scale: 0.7 },
   { name: 'Pharm Nutrition', src: '/logos/pharm-nutrition.svg' },
   { name: '대한몰', src: '/logos/daehanmall.png' },
   { name: 'LOWORD', src: '/logos/loword.png', scale: 0.6 },
@@ -74,15 +73,6 @@ export const CASES: CaseItem[] = [
     results: ['반복 업무 시간 70%↑ 단축'],
     images: 3,
     tone: 1,
-  },
-  {
-    tags: ['AX 구축', '뉴스 큐레이션'],
-    title: 'ScopeLabs 맞춤형 AI 뉴스 큐레이션',
-    meta: 'AX 컨설팅 · 맞춤형 AI 개발',
-    summary: '관심 키워드와 업무 분야에 맞춰 AI가 기사를 실시간으로 수집·평가하고, 핵심만 알림으로 전달합니다.',
-    results: ['뉴스 탐색·정리 시간 60% 단축'],
-    images: 3,
-    tone: 2,
   },
   {
     tags: ['기업 교육', 'AI 비즈니스'],
